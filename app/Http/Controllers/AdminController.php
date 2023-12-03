@@ -10,6 +10,8 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $pageTitle = "Хянах самбар";
+
+        return view('admin.dashboard', compact('pageTitle'));
     }
 }
