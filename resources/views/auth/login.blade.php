@@ -1,16 +1,13 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-
 <head>
-
     <!-- META DATA -->
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Sash – Bootstrap 5  Admin & Dashboard Template">
     <meta name="author" content="Spruko Technologies Private Limited">
-    <meta name="keywords"
-        content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
+    <meta name="keywords" content="admin,admin dashboard,admin panel">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin_assets/images/brand/favicon.ico') }}" />
@@ -31,15 +28,10 @@
     <link href="{{ asset('admin_assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all"
-        href="{{ asset('admin_assets/colors/color1.css') }}" />
-        
-    
-
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{ asset('admin_assets/colors/color1.css') }}" />
 </head>
 
 <body class="app sidebar-mini ltr login-img">
-
     <!-- BACKGROUND-IMAGE -->
     <div class="">
 
@@ -55,8 +47,7 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="{{ asset('admin_assets/images/brand/logo-white.png') }}"
-                                class="header-brand-img" alt=""></a>
+                        <a href="index.html"><img src="{{ asset('admin_assets/images/brand/logo-white.png') }}" class="header-brand-img" alt=""></a>
                     </div>
                 </div>
                 <div class="container-login100">
@@ -76,25 +67,22 @@
                                     <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                                         <i class="zmdi zmdi-email text-muted" aria-hidden="true"></i>
                                     </a>
-                                    <input class="input100 border-start-0 form-control ms-0" type="email"
-                                        placeholder="Email" name="email" required>
+                                    <input class="form-control" type="email" placeholder="Email" name="email" required>
                                 </div>
                                 <div class="wrap-input100 validate-input input-group" id="Password-toggle">
                                     <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                                         <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
                                     </a>
-                                    <input class="input100 border-start-0 form-control ms-0" type="password"
-                                        placeholder="Password" name="password" required>
+                                    <input class="form-control" type="password" placeholder="Password" name="password" required>
                                 </div>
                                 <div class="text-end pt-4">
                                     <p class="mb-0">
-                                        <a href="forgot-password.html" class="text-primary ms-1">Forgot Password?</a>
+                                        <a href="{{ route('password.request') }}" class="text-primary ms-1">Нууц үгээ мартсан</a>
                                     </p>
                                 </div>
                                 <div class="container-login100-form-btn">
                                     <button type="submit" class="login100-form-btn btn-primary">Нэвтрэх</button>
                                 </div>
-                            
                             </div>
                         </form>
                     </div>
@@ -103,7 +91,6 @@
             </div>
         </div>
         <!-- End PAGE -->
-        
     </div>
     <!-- BACKGROUND-IMAGE CLOSED -->
 
@@ -135,5 +122,4 @@
     <!-- INPUT MASK JS-->
     <script src="{{ asset('admin_assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
 </body>
-
 </html>
