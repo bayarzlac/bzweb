@@ -116,8 +116,8 @@
     <!-- CUSTOM JS -->
     <script src="{{ asset('admin_assets/js/custom.js') }}"></script>
 
-    <!-- FORMVALIDATION JS -->
-    <script src="{{ asset('admin_assets/js/form-validation.js') }}"></script>
+    <!-- FORMVALIDATION JS SELECT ashiglaagui uyd duudah validation -->
+    <script src="{{ asset('admin_assets/js/form-validation-without-select.js') }}"></script>
 
     <!-- INPUT MASK JS-->
     <script src="{{ asset('admin_assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
