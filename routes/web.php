@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +28,15 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+
 });
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::get('/products/index', [ProductsController::class, 'index'])->name('admin.products');
+    Route::get('/products/categories/{id?}', [ProductsController::class, 'categories'])->name('admin.products.categories');
+    Route::post('/products/categories/store', [ProductsController::class, 'store_category'])->name('admin.products.categories.store');
+
 });

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" dir="ltr">
+
 <head>
     <!-- META DATA -->
     <meta charset="UTF-8">
@@ -28,7 +29,8 @@
     <link href="{{ asset('admin_assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{ asset('admin_assets/colors/color1.css') }}" />
+    <link id="theme" rel="stylesheet" type="text/css" media="all"
+        href="{{ asset('admin_assets/colors/color1.css') }}" />
 </head>
 
 <body class="app sidebar-mini ltr login-img">
@@ -47,45 +49,77 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="{{ asset('admin_assets/images/brand/logo-white.png') }}" class="header-brand-img" alt=""></a>
+                        <a href="index.html"><img src="{{ asset('admin_assets/images/brand/logo-white.png') }}"
+                                class="header-brand-img" alt=""></a>
                     </div>
                 </div>
-                <div class="container-login100">
-                    <div class="wrap-login100 p-6">
-                        <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate>
-                            @csrf
-                            <span class="login100-form-title pb-5">
-                                Нэвтрэх
-                            </span>
-                            @if (session('status'))
-                                <div class="mb-4 font-medium text-sm text-green-600">
-                                    {{ session('status') }}
+
+                @if (session('status'))
+                    <div class="row mt-6" style="justify-content: center;">
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="card border p-0 pb-3">
+                                <div class="card-header border-0 pt-3">
+                                    <div class="card-options">
+                                        <a href="javascript:void(0)" class="card-options-remove"
+                                            data-bs-toggle="card-remove"><i class="fe fe-x"></i></a>
+                                    </div>
                                 </div>
-                            @endif
-                            <div class="panel panel-primary">
-                                <div class="wrap-input100 validate-input input-group">
-                                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
-                                        <i class="zmdi zmdi-email text-muted" aria-hidden="true"></i>
-                                    </a>
-                                    <input class="form-control" type="email" placeholder="Email" name="email" required>
-                                </div>
-                                <div class="wrap-input100 validate-input input-group" id="Password-toggle">
-                                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
-                                        <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
-                                    </a>
-                                    <input class="form-control" type="password" placeholder="Password" name="password" required>
-                                </div>
-                                <div class="text-end pt-4">
-                                    <p class="mb-0">
-                                        <a href="{{ route('password.request') }}" class="text-primary ms-1">Нууц үгээ мартсан</a>
-                                    </p>
-                                </div>
-                                <div class="container-login100-form-btn">
-                                    <button type="submit" class="login100-form-btn btn-primary">Нэвтрэх</button>
+                                <div class="card-body text-center">
+                                    <span class=""><svg xmlns="http://www.w3.org/2000/svg" height="60"
+                                            width="60" viewBox="0 0 24 24">
+                                            <path fill="#f07f8f"
+                                                d="M20.05713,22H3.94287A3.02288,3.02288,0,0,1,1.3252,17.46631L9.38232,3.51123a3.02272,3.02272,0,0,1,5.23536,0L22.6748,17.46631A3.02288,3.02288,0,0,1,20.05713,22Z" />
+                                            <circle cx="12" cy="17" r="1" fill="#e62a45" />
+                                            <path fill="#e62a45"
+                                                d="M12,14a1,1,0,0,1-1-1V9a1,1,0,0,1,2,0v4A1,1,0,0,1,12,14Z" />
+                                        </svg></span>
+                                    <h4 class="h4 mb-0 mt-3">Warning</h4>
+                                    <p class="card-text">{{ session('status') }}</p>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
+                @endif
+
+                <div class="container-login100">
+
+                    <div class="row">
+                        <div class="wrap-login100 p-6">
+                            <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate>
+                                @csrf
+                                <span class="login100-form-title pb-5">
+                                    Нэвтрэх
+                                </span>
+
+                                <div class="panel panel-primary">
+                                    <div class="wrap-input100 validate-input input-group">
+                                        <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                                            <i class="zmdi zmdi-email text-muted" aria-hidden="true"></i>
+                                        </a>
+                                        <input class="form-control" type="email" placeholder="Email" name="email"
+                                            required>
+                                    </div>
+                                    <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                        <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                                            <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
+                                        </a>
+                                        <input class="form-control" type="password" placeholder="Password"
+                                            name="password" required>
+                                    </div>
+                                    <div class="text-end pt-4">
+                                        <p class="mb-0">
+                                            <a href="{{ route('password.request') }}" class="text-primary ms-1">Нууц
+                                                үгээ мартсан</a>
+                                        </p>
+                                    </div>
+                                    <div class="container-login100-form-btn">
+                                        <button type="submit" class="login100-form-btn btn-primary">Нэвтрэх</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
                 <!-- CONTAINER CLOSED -->
             </div>
@@ -122,4 +156,5 @@
     <!-- INPUT MASK JS-->
     <script src="{{ asset('admin_assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
 </body>
+
 </html>
