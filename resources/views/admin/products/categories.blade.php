@@ -4,7 +4,7 @@
         <div class="col-md-12 col-xl-4">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Ангилал</h4>
+                    <h4 class="card-title">Ангилал харагдац</h4>
                 </div>
                 <div class="card-body">
                     <div class="dTree">
@@ -15,11 +15,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-12 col-xl-4">
+
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Ангилал нэмэх</h4>
+                    <h4 class="card-title">Ангилал нэмэх / засах</h4>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('admin.products.categories.store') }}" method="POST" class="needs-validation" novalidate>
@@ -48,8 +47,30 @@
                                 <input type="text" name="description" class="form-control" />
                             </div>
                         </div>
-                        <button class="btn btn-primary mt-4 mb-0">Submit</button>
+                        <button class="btn btn-primary mt-4 mb-0">Нэмэх</button>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Ангилалын жагсаалт</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered border text-nowrap mb-0" id="basic-edit">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Ангилал</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @include('admin.products.rows', ['categories' => $rootCategories])
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,6 +80,9 @@
     <!-- Internal Dtree Treeview js -->
     <script src="{{ asset('admin_assets/plugins/dtree/dtree.js') }}"></script>
     <script src="{{ asset('admin_assets/plugins/dtree/dtree1.js') }}"></script>
-
     <script src="{{ asset('admin_assets/js/form-validation-with-select.js') }}"></script>
+
+    <!-- INTERNAL Edit-Table JS -->
+    <script src="{{ asset('admin_assets/plugins/edit-table/bst-edittable.js') }}"></script>
+    <script src="{{ asset('admin_assets/plugins/edit-table/edit-table.js') }}"></script>
 @endsection

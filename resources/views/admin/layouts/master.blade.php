@@ -32,7 +32,7 @@
 
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{ asset('admin_assets/colors/color1.css') }}" />
-
+    @yield('styles')
 </head>
 
 <body class="app sidebar-mini ltr light-mode">

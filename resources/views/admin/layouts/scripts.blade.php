@@ -17,6 +17,11 @@
 <!-- SIDEBAR JS -->
 <script src="{{ asset('admin_assets/plugins/sidebar/sidebar.js') }}"></script>
 
+<!-- Perfect SCROLLBAR JS-->
+<script src="{{ asset('admin_assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script>
+<script src="{{ asset('admin_assets/plugins/p-scroll/pscroll.js') }}"></script>
+<script src="{{ asset('admin_assets/plugins/p-scroll/pscroll-1.js') }}"></script>
+
 <!-- INTERNAL SELECT2 JS -->
 <script src="{{ asset('admin_assets/plugins/select2/select2.full.min.js') }}"></script>
 

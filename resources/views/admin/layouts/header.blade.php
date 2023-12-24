@@ -38,6 +38,13 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="d-flex country">
+                                <a class="nav-link icon theme-layout nav-link-bg layout-setting">
+                                    <span class="dark-layout"><i class="fe fe-moon"></i></span>
+                                    <span class="light-layout"><i class="fe fe-sun"></i></span>
+                                </a>
+                            </div>
                             
                             <div class="dropdown d-flex">
                                 <a class="nav-link icon full-screen-link nav-link-bg">

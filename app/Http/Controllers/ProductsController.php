@@ -11,7 +11,9 @@ class ProductsController extends Controller
 {
     public function index() 
     {
-        return view('admin.products.index');
+        $pageTitle = 'Бараа, бүтээгдэхүүний бүртгэл';
+
+        return view('admin.products.index', compact('pageTitle'));
     }
 
     public function categories($id = null)
@@ -19,8 +21,6 @@ class ProductsController extends Controller
         $pageTitle = 'Бараа, бүтээгдэхүүний ангилал';
         $rootCategories = ProductCategories::whereNull('parent_id')->get();
         $allCategories = ProductCategories::get();
-
-
 
         return view('admin.products.categories', compact('pageTitle', 'rootCategories', 'allCategories'));
     }
@@ -35,5 +35,18 @@ class ProductsController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'yu yaachlaa');
+    }
+
+    public function new()
+    {
+        $pageTitle = 'Бараа, бүтээгдэхүүн';
+
+        return view('admin.products.new', compact('pageTitle'));
+    }
+
+    public function store(Request $request)
+    {
+        
+        return $request;
     }
 }

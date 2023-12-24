@@ -38,5 +38,6 @@ Route::prefix('admin')->group(function () {
     Route::get('/products/index', [ProductsController::class, 'index'])->name('admin.products');
     Route::get('/products/categories/{id?}', [ProductsController::class, 'categories'])->name('admin.products.categories');
     Route::post('/products/categories/store', [ProductsController::class, 'store_category'])->name('admin.products.categories.store');
-
+    Route::get('/products/new', [ProductsController::class, 'new'])->name('admin.products.new');
+    Route::post('/products/store', [ProductsController::class, 'store'])->name('admin.products.store');
 });

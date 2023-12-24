@@ -27,7 +27,7 @@
                 <li class="sub-category">
                     <h3>Худалдаа</h3>
                 </li>
-                <li class="slide">
+                <li class="slide {{ request()->is('admin/products*') ? 'is-expanded' : '' }}">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
                         <i class="side-menu__icon fe fe-slack"></i>
                         <span class="side-menu__label">Бараа</span>
@@ -35,71 +35,15 @@
                     </a>
                     <ul class="slide-menu">
                         <li class="side-menu-label1"><a href="javascript:void(0)">Бараа</a></li>
-                        <li><a href="{{ route('admin.products.categories') }}" class="slide-item"> Ангилал</a></li>
-                    </ul>
-                </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
-                            class="side-menu__icon fe fe-package"></i><span class="side-menu__label">Bootstrap</span><i
-                            class="angle fe fe-chevron-right"></i></a>
-                    <ul class="slide-menu mega-slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Bootstrap</a></li>
-                        <div class="mega-menu">
-                            <div class="">
-                                <ul>
-                                    <li><a href="alerts.html" class="slide-item"> Alerts</a></li>
-                                    <li><a href="buttons.html" class="slide-item"> Buttons</a></li>
-                                    <li><a href="colors.html" class="slide-item"> Colors</a></li>
-                                    <li><a href="avatarsquare.html" class="slide-item"> Avatar Square</a></li>
-                                    <li><a href="avatar-radius.html" class="slide-item"> Avatar Radius</a></li>
-                                    <li><a href="avatar-round.html" class="slide-item"> Avatar Rounded</a></li>
-                                    <li><a href="dropdown.html" class="slide-item"> Dropdowns</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <a class="side-menu__item has-link" href="landing-page.html" target="_blank"><i
-                            class="side-menu__icon fe fe-zap"></i><span class="side-menu__label">Landing
-                            Page</span><span class="badge bg-green br-5 side-badge blink-text pb-1">New</span></a>
-                </li>
-                <li class="sub-category">
-                    <h3>Pre-build Pages</h3>
-                </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
-                            class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Pages</span><i
-                            class="angle fe fe-chevron-right"></i></a>
-                    <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
-                        <li><a href="profile.html" class="slide-item"> Profile</a></li>
-                        <li><a href="editprofile.html" class="slide-item"> Edit Profile</a></li>
-                        <li><a href="notify-list.html" class="slide-item"> Notifications List</a></li>
-                        <li><a href="email-compose.html" class="slide-item"> Mail-Compose</a></li>
-                        <li><a href="email-inbox.html" class="slide-item"> Mail-Inbox</a></li>
-                        <li><a href="email-read.html" class="slide-item"> Mail-Read</a></li>
-                        <li><a href="gallery.html" class="slide-item"> Gallery</a></li>
-                        <li class="sub-slide">
-                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="javascript:void(0)"><span
-                                    class="sub-side-menu__label">Forms</span><i
-                                    class="sub-angle fe fe-chevron-right"></i></a>
-                            <ul class="sub-slide-menu">
-                                <li><a href="form-elements.html" class="sub-slide-item"> Form Elements</a>
-                                </li>
-                                <li><a href="form-layouts.html" class="sub-slide-item"> Form Layouts</a>
-                                </li>
-                                <li><a href="form-advanced.html" class="sub-slide-item"> Form Advanced</a>
-                                </li>
-                                <li><a href="form-editor.html" class="sub-slide-item"> Form Editor</a></li>
-                                <li><a href="form-wizard.html" class="sub-slide-item"> Form Wizard</a></li>
-                                <li><a href="form-validation.html" class="sub-slide-item"> Form Validation</a></li>
-                                <li><a href="form-input-spinners.html" class="sub-slide-item"> Form Input Spinners</a>
-                                </li>
-                            </ul>
+                        <li><a href="{{ route('admin.products.categories') }}" class="slide-item {{ request()->is('admin/products/categories') ? 'active' : '' }}"> Ангилал</a></li>
+                        <li>
+                            <a href="{{ route('admin.products') }}" class="slide-item {{ request()->is('admin/products/index') ? 'active' : '' }}">Барааны бүртгэл</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.products.new') }}" class="slide-item {{ request()->is('admin/products/new') ? 'active' : '' }}" >Шинээр нэмэх</a>
                         </li>
                     </ul>
-                </li>
+                </li>                
             </ul>
             <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
                     width="24" height="24" viewBox="0 0 24 24">
