@@ -12,25 +12,33 @@
             <!-- LOGO -->
         </div>
         <div class="main-sidemenu">
-            <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+            <div class="slide-left disabled" id="slide-left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
                     width="24" height="24" viewBox="0 0 24 24">
                     <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
-                </svg></div>
-            <ul class="side-menu">
+                </svg>
+            </div>
+            <ul class="side-menu mt-8">
+                <li class="slide">
+                    <a class="side-menu__item has-link {{ request()->is('admin/dashboard') ? 'active' : '' }}" 
+                        data-bs-toggle="slide" href="{{ route('admin.dashboard') }}">
+                        <i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Хянах самбар</span>
+                    </a>
+                </li>
                 <li class="sub-category">
-                    <h3>Main</h3>
+                    <h3>Бүртгэл</h3>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
-                            class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Dashboard</span></a>
-                </li>
-                <li class="sub-category">
-                    <h3>Худалдаа</h3>
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
+                        <i class="side-menu__icon fe fe-users"></i>
+                        <span class="side-menu__label">Хэрэглэгчид</span>
+                        <i class="angle fe fe-chevron-right"></i>
+                    </a>
                 </li>
                 <li class="slide {{ request()->is('admin/products*') ? 'is-expanded' : '' }}">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
                         <i class="side-menu__icon fe fe-slack"></i>
-                        <span class="side-menu__label">Бараа</span>
+                        <span class="side-menu__label">Бараа бүртгэл</span>
                         <i class="angle fe fe-chevron-right"></i>
                     </a>
                     <ul class="slide-menu">
@@ -43,7 +51,24 @@
                             <a href="{{ route('admin.products.new') }}" class="slide-item {{ request()->is('admin/products/new') ? 'active' : '' }}" >Шинээр нэмэх</a>
                         </li>
                     </ul>
-                </li>                
+                </li>
+                <li class="sub-category">
+                    <h3>Веб сайтын агуулга</h3>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
+                        <i class="side-menu__icon fe fe-menu"></i>
+                        <span class="side-menu__label">Цэс</span>
+                        <i class="angle fe fe-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
+                        <i class="side-menu__icon fe fe-edit"></i>
+                        <span class="side-menu__label">Агуулга</span>
+                        <i class="angle fe fe-chevron-right"></i>
+                    </a>
+                </li>
             </ul>
             <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
                     width="24" height="24" viewBox="0 0 24 24">
