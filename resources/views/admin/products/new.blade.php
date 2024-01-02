@@ -1,5 +1,10 @@
 @extends('admin.layouts.master')
 @section('styles')
+    <style type="text/css">
+        ul {
+            list-style-type: none
+        }
+    </style>
 @endsection
 @section('content')
     <div class="row">
@@ -46,7 +51,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <button type="submit" class="btn btn-primary mb-3">Submit</button>
                     </form>
                 </div>
