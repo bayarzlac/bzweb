@@ -1,10 +1,5 @@
 @extends('admin.layouts.master')
 @section('styles')
-    <style type="text/css">
-        ul {
-            list-style-type: none
-        }
-    </style>
 @endsection
 @section('content')
     <div class="row">
@@ -21,34 +16,17 @@
                                 <label>Барааны нэр</label>
                                 <input type="text" class="form-control" name="title" required>
                             </div>
+                            <div class="col-xl-2 mb-3">
+                                <label>Барааны үнэ</label>
+                                <input type="number" class="form-control" name="price" required>
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="col-xl-8">
                                 <textarea id="summernote" name="summernote"></textarea>
                             </div>
                             <div class="col-xl-4 px-5">
-                                <ul class="list-style-1">
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Consectetur adipiscing elit</li>
-                                    <li>Integer molestie lorem at massa</li>
-                                    <li>Facilisis in pretium nisl aliquet</li>
-                                    <li>Nulla volutpat aliquam velit
-                                        <ul>
-                                            <li>Phasellus iaculis neque</li>
-                                            <li>Purus sodales ultricies</li>
-                                            <li>Vestibulum laoreet porttitor sem</li>
-                                            <li>Ac tristique libero volutpat at</li>
-                                        </ul>
-                                    </li>
-                                    <li>Faucibus porta lacus fringilla vel</li>
-                                    <li>Aenean sit amet erat nunc</li>
-                                    <li>
-                                        <label class="custom-control custom-checkbox-md">
-                                            <input type="checkbox" class="custom-control-input" name="example-checkbox5" value="option5" checked>
-                                            <span class="custom-control-label">Option 1</span>
-                                        </label>
-                                    </li>
-                                </ul>
+                                @include('admin.products.checkTree', ['categories' => $rootCategories])
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary mb-3">Submit</button>

@@ -9,7 +9,7 @@ use App\Models\Products;
 
 class ProductsController extends Controller
 {
-    public function index() 
+    public function index()
     {
         $pageTitle = 'Бараа, бүтээгдэхүүний бүртгэл';
 
@@ -29,8 +29,8 @@ class ProductsController extends Controller
     {
         $category = ProductCategories::create([
             'num' => $request->num,
-            'category' => $request->category, 
-            'description' => $request->description, 
+            'category' => $request->category,
+            'description' => $request->description,
             'parent_id' => $request->parent_id
         ]);
 
@@ -40,13 +40,17 @@ class ProductsController extends Controller
     public function new()
     {
         $pageTitle = 'Бараа, бүтээгдэхүүн';
+        $rootCategories = ProductCategories::whereNull('parent_id')->get();
 
-        return view('admin.products.new', compact('pageTitle'));
+        return view('admin.products.new', compact('pageTitle', 'rootCategories'));
     }
 
     public function store(Request $request)
     {
-        
-        return $request;
+        $categories = $request->categories;
+
+        foreach ($categories as $key => $value) {
+            
+        }
     }
 }
