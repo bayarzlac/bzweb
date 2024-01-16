@@ -50,7 +50,6 @@ class ProductsController extends Controller
 
     public function store(Request $request)
     {
-<<<<<<< HEAD
         $product = Products::where('title', '=', $request->title)->first();
 
         if ($product) {
@@ -75,12 +74,6 @@ class ProductsController extends Controller
         }
         else {
             return redirect()->back()->with('warning', 'ee huurhii aldaa');
-=======
-        $categories = $request->categories;
-
-        foreach ($categories as $key => $value) {
-            
->>>>>>> e68eb9ddadbe52a4063fd58e34a6c6df08fc19dc
         }
     }
 }
