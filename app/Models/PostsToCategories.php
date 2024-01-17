@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class Posts extends Model
+class PostsToCategories extends Model
 {
     use SoftDeletes;
 
@@ -14,9 +14,7 @@ class Posts extends Model
     ];
 
     protected $fillable = [
-        'title', 
         'category_id', 
-        'content', 
-        'user_id'
+        'post_id'
     ];
 }

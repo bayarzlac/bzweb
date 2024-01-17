@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,10 @@ Route::prefix('admin')->group(function () {
     Route::post('/products/categories/store', [ProductsController::class, 'store_category'])->name('admin.products.categories.store');
     Route::get('/products/new', [ProductsController::class, 'new'])->name('admin.products.new');
     Route::post('/products/store', [ProductsController::class, 'store'])->name('admin.products.store');
+
+    Route::get('/posts/categories', [PostController::class, 'categories'])->name('admin.posts.categories');
+    Route::post('/posts/categories/store', [PostController::class, 'store_category'])->name('admin.posts.categories.store');
+
+    Route::get('/posts', [PostController::class, 'index'])->name('admin.posts');
+    Route::get('/posts/new', [PostController::class, 'new'])->name('admin.posts.new');
 });

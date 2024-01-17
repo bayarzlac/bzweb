@@ -62,18 +62,25 @@
                         <i class="angle fe fe-chevron-right"></i>
                     </a>
                 </li>
-                <li class="slide">
+                <li class="slide {{ request()->is('admin/posts*') ? 'is-expanded' : '' }}">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
                         <i class="side-menu__icon fe fe-edit"></i>
                         <span class="side-menu__label">Агуулга</span>
                         <i class="angle fe fe-chevron-right"></i>
                     </a>
+                    <ul class="slide-menu">
+                        <li class="side-menu-label1"><a href="javascript:void(0)">Агуулга</a></li>
+                        <li><a href="{{ route('admin.posts.categories') }}" class="slide-item {{ request()->is('admin/posts/categories') ? 'active' : '' }}"> Ангилал</a></li>
+                        <li><a href="{{ route('admin.posts') }}" class="slide-item {{ request()->is('admin/posts') ? 'active' : '' }}"> Агуулгын жагсаалт</a></li>
+                        <li><a href="{{ route('admin.posts.new') }}" class="slide-item {{ request()->is('admin/posts/new') ? 'active' : '' }}"> Агуулга нэмэх</a></li>
+                    </ul>
                 </li>
             </ul>
-            <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
-                    width="24" height="24" viewBox="0 0 24 24">
+            <div class="slide-right" id="slide-right">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
                     <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
-                </svg></div>
+                </svg>
+            </div>
         </div>
     </div>
     <!--/APP-SIDEBAR-->
