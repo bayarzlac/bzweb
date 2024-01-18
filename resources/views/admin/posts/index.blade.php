@@ -20,9 +20,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($posts as $item)
+                                @foreach ($posts as $index => $item)
                                     <tr>
-                                        <td>{{ $item->index + 1 }}</td>
+                                        <td>{{ $index + 1 }}</td>
                                         <td>{{ $item->title }}</td>
                                         <td>
                                             {{ $item->header_img_path ? 'Зурагтай' : 'Зураггүй' }}

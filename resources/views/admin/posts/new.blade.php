@@ -11,7 +11,8 @@
                         @include('admin.layouts.alert')
                     </div>
 
-                    <form action="{{ route('admin.post.store') }}" method="POST" class="needs-validation" novalidate>
+                    <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data" 
+                        class="needs-validation" novalidate>
                         @csrf
                         <div class="form-row">
                             <div class="col-lg-6 col-md-12">
@@ -64,12 +65,29 @@
     <script src="{{ asset('admin_assets/plugins/fileuploads/js/fileupload.js') }}"></script>
     <script src="{{ asset('admin_assets/plugins/fileuploads/js/file-upload.js') }}"></script>
 
+    <!-- INTERNAL File-Uploads Js-->
+    {{-- <script src="{{ asset('admin_assets/plugins/fancyuploder/jquery.ui.widget.js') }}"></script>
+    <script src="{{ asset('admin_assets/plugins/fancyuploder/jquery.fileupload.js')}}"></script>
+    <script src="{{ asset('admin_assets/plugins/fancyuploder/jquery.iframe-transport.js') }}"></script>
+    <script src="{{ asset('admin_assets/plugins/fancyuploder/jquery.fancy-fileupload.js') }}"></script>
+    <script src="{{ asset('admin_assets/plugins/fancyuploder/fancy-uploader.js') }}"></script> --}}
+
+    <!-- INTERNAL Sumoselect js-->
+    {{-- <script src="{{ asset('admin_assets/plugins/sumoselect/jquery.sumoselect.js') }}"></script> --}}
+
+    <!-- INTERNAL multi js-->
+    {{-- <script src="{{ asset('admin_assets/plugins/multi/multi.min.js') }}"></script> --}}
+
+    <!-- FORMELEMENTS JS -->
+    {{-- <script src="{{ asset('admin_assets/js/formelementadvnced.js') }}"></script>
+    <script src="{{ asset('admin_assets/js/form-elements.js') }}"></script> --}}
+
     <!-- INTERNAL jquery transfer js-->
     {{-- <script src="{{ asset('admin_assets/plugins/jQuerytransfer/jquery.transfer.js') }}"></script> --}}
 
     <!-- MULTI SELECT JS-->
-    <script src="{{ asset('admin_assets/plugins/multipleselect/multiple-select.js') }}"></script>
-    <script src="{{ asset('admin_assets/plugins/multipleselect/multi-select.js') }}"></script>
+    {{-- <script src="{{ asset('admin_assets/plugins/multipleselect/multiple-select.js') }}"></script>
+    <script src="{{ asset('admin_assets/plugins/multipleselect/multi-select.js') }}"></script> --}}
 
     <!-- FORMELEMENTS JS -->
     {{-- <script src="{{ asset('admin_assets/js/formelementadvnced.js') }}"></script>

@@ -36,7 +36,7 @@ Route::middleware([
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
-    Route::get('/products/index', [ProductsController::class, 'index'])->name('admin.products');
+    Route::get('/products/index/{id?}', [ProductsController::class, 'index'])->name('admin.products');
     Route::get('/products/categories/{id?}', [ProductsController::class, 'categories'])->name('admin.products.categories');
     Route::post('/products/categories/store', [ProductsController::class, 'store_category'])->name('admin.products.categories.store');
     Route::get('/products/new', [ProductsController::class, 'new'])->name('admin.products.new');
