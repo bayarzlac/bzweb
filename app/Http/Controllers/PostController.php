@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Models\PostCategories;
 use App\Models\Posts;
@@ -46,9 +47,20 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        $img_path = '';
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = substr(Str::uuid(), 0, 8) . '.jpg';
+            $file->move(public_path('headers'), $filename);
+
+            $img_path = 'headers/' . $filename;
+        }
+
         $post = Posts::create([
             'title' => $request->title, 
-            'category_id' => $request->category_id, 
+            'header_img_path' => $img_path,
+            'short' => $request->short,
             'content' => $request->content, 
             'user_id' => 1
         ]);

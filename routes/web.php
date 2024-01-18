@@ -47,4 +47,5 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/posts', [PostController::class, 'index'])->name('admin.posts');
     Route::get('/posts/new', [PostController::class, 'new'])->name('admin.posts.new');
+    Route::post('/posts/store', [PostController::class, 'store'])->name('admin.post.store');
 });
