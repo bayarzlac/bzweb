@@ -18,17 +18,26 @@
                         @csrf
                         <div class="form-row">
                             <div class="col-xl-8">
-                                <div class="form-row">
-                                    <div class="col-xl-6 mb-3">
+                                <div class="form-row mb-3">
+                                    <div class="col-xl-6">
                                         <div class="form-group">
                                             <label class="form-label">Барааны нэр</label>
                                             <input type="text" class="form-control" name="title" required>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 mb-3">
+                                    <div class="col-xl-4">
                                         <div class="form-group">
                                             <label class="form-label">Барааны үнэ</label>
                                             <input type="number" class="form-control" name="price" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2">
+                                        <div class="form-group">
+                                            <label class="form-label">Үнэ харуулах</label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="price_visibility" value="option5">
+                                                <span class="custom-control-label">Харагдах</span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +53,9 @@
                             <div class="col-xl-4 px-5">
                                 <div class="form-group">
                                     <label class="form-label">Хамаарах ангилал</label>
-                                    @include('admin.products.checkTree', ['categories' => $rootCategories])
+                                    <div class="custom-controls-stacked">
+                                        @include('admin.products.checkTree', ['categories' => $rootCategories])
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Барааны зургууд</label>
@@ -68,8 +79,8 @@
     <script src="{{ asset('admin_assets/js/form-validation-without-select.js') }}"></script>
 
     <!-- FILE UPLOADES JS -->
-    <script src="{{ asset('admin_assets/plugins/fileuploads/js/fileupload.js') }}"></script>
-    <script src="{{ asset('admin_assets/plugins/fileuploads/js/file-upload.js') }}"></script>
+    {{-- <script src="{{ asset('admin_assets/plugins/fileuploads/js/fileupload.js') }}"></script>
+    <script src="{{ asset('admin_assets/plugins/fileuploads/js/file-upload.js') }}"></script> --}}
 
     <!-- INTERNAL File-Uploads Js-->
     <script src="{{ asset('admin_assets/plugins/fancyuploder/jquery.ui.widget.js') }}"></script>

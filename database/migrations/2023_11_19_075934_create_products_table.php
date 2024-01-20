@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->decimal('price', 8, 2);
+            $table->boolean('price_visibility');
             $table->text('description');
             $table->softDeletes();
             $table->timestamps();
