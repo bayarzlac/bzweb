@@ -2,7 +2,8 @@
 <ul class="list-style-1">
     @foreach ($categories as $item)
         <li>
-            {{ $item->title }}
+            <a href="{{ route('admin.posts.categories', $item->id) }}">{{ $item->title }}</a>
+            
             @if ($item->children->count() > 0)
                 @include('admin.posts.tree', ['categories' => $item->children])
             @endif

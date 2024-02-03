@@ -55,12 +55,16 @@
                 <li class="sub-category">
                     <h3>Веб сайтын агуулга</h3>
                 </li>
-                <li class="slide">
+                <li class="slide {{ request()->is('admin/menus*') ? 'is-expanded' : '' }}">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
                         <i class="side-menu__icon fe fe-menu"></i>
                         <span class="side-menu__label">Цэс</span>
                         <i class="angle fe fe-chevron-right"></i>
                     </a>
+                    <ul class="slide-menu">
+                        <li class="side-menu-label1"><a href="javascript:void(0)">Цэс</a></li>
+                        <li><a href="{{ route('admin.menus.main') }}" class="slide-item {{ request()->is('admin/menus/main') ? 'active' : '' }}"> Үндсэн цэс</a></li>
+                    </ul>
                 </li>
                 <li class="slide {{ request()->is('admin/posts*') ? 'is-expanded' : '' }}">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">

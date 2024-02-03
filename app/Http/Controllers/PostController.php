@@ -15,8 +15,9 @@ class PostController extends Controller
     {
         $pageTitle = "Агуулгын ангилал";
         $rootCategories = PostCategories::whereNull('main_id')->get();
+        $allCategories = PostCategories::get();
 
-        return view('admin.posts.categories', compact('pageTitle', 'rootCategories'));
+        return view('admin.posts.categories', compact('pageTitle', 'rootCategories', 'allCategories'));
     }
 
     public function store_category(Request $request)

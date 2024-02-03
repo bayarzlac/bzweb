@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ProductCategories extends Model
+class MainMenu extends Model
 {
     use SoftDeletes;
 
@@ -15,13 +15,14 @@ class ProductCategories extends Model
 
     protected $fillable = [
         'num', 
-        'category', 
-        'descripition',
+        'title', 
+        'description', 
+        'url', 
         'parent_id'
     ];
 
     public function children()
     {
-        return $this->hasMany(ProductCategories::class, 'parent_id')->with('children');
+        return $this->hasMany(MainMenu::class, 'parent_id')->with('children');
     }
 }
