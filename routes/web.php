@@ -19,7 +19,7 @@ use App\Http\Controllers\MenuController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::middleware([
@@ -30,8 +30,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
-
 });
 
 Route::prefix('admin')->group(function () {
