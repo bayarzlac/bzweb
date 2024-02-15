@@ -6,6 +6,12 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    // 'num', 
+    //     'title', 
+    //     'description', 
+    //     'url', 
+    //     'parent_id'
+
     /**
      * Run the migrations.
      */
@@ -13,6 +19,12 @@ return new class extends Migration
     {
         Schema::create('main_menus', function (Blueprint $table) {
             $table->id();
+            $table->integer('num');
+            $table->string('title');
+            $table->string('description')->nullable();
+            $table->foreignId('parent_id')->nullable();
+            $table->foreign('parent_id')->references('id')->on('main_menus')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
