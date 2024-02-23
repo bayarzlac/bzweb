@@ -8,18 +8,24 @@
             <form action="{{ route('admin.menus.main.store') }}" method="post">
                 @csrf
                 <div class="form-group">
+                    <label for="">Дэс дугаар</label>
+                    <input type="text" name="num" class="form-control" required>
+                </div>
+                <div class="form-group">
                     <label>Цэс</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" name="title" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="">Дэд цэс болгох</label>
-                    {{-- <select class="form-select form-control" name="parent_id">
+                    <select class="form-select form-control" name="parent_id">
                         <option selected value="">Сонгох...</option>
-                        @foreach ($allCategories as $item)
-                            <option value="{{ $item->id }}" {{ $item->id == request('id') ? 'selected' : '' }}>{{ $item->category }}</option>
+                        @foreach ($mainmenu as $item)
+                            <option value="{{ $item->id }}" {{ $item->id == request('id') ? 'selected' : '' }}>{{ $item->title }}</option>
                         @endforeach
-                    </select> --}}
+                    </select>
                 </div>
+
+                <input type="submit" class="btn btn-primary" />
             </form>
         </div>
     </div>

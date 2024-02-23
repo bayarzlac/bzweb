@@ -19,9 +19,10 @@ return new class extends Migration
     {
         Schema::create('main_menus', function (Blueprint $table) {
             $table->id();
-            $table->integer('num');
+            $table->decimal('num', 2, 1);
             $table->string('title');
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
+            $table->string('url')->nullable();
             $table->foreignId('parent_id')->nullable();
             $table->foreign('parent_id')->references('id')->on('main_menus')->onDelete('cascade');
             $table->softDeletes();

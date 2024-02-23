@@ -49,5 +49,5 @@ Route::prefix('admin')->group(function () {
     Route::post('/posts/store', [PostController::class, 'store'])->name('admin.post.store');
 
     Route::get('/menus/main', [MenuController::class, 'main'])->name('admin.menus.main');
-    Route::post('/menus/store_main', [MainController::class, 'store_main'])->name('admin.menus.main.store');
+    Route::post('/menus/store_main', [MenuController::class, 'store_main'])->name('admin.menus.main.store');
 });
