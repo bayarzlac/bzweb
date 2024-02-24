@@ -20,7 +20,7 @@ use App\Http\Controllers\MenuController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::middleware([
     'auth:sanctum',
