@@ -14,7 +14,7 @@ class MenuController extends Controller
         $pageTitle = "Үндсэн цэс";
         $mainmenu = MainMenu::orderBy('num')->get();
 
-        $menuItems = MainMenu::whereNull('parent_id')->get();
+        $menuItems = MainMenu::whereNull('parent_id')->orderBy('num')->get();
 
         return view('admin.menus.main', compact('pageTitle', 'menuItems', 'mainmenu'));
     }

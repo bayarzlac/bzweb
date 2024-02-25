@@ -6,15 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    // 'num', 
-    //     'title', 
-    //     'description', 
-    //     'url', 
-    //     'parent_id'
-
     /**
      * Run the migrations.
      */
+    
     public function up(): void
     {
         Schema::create('main_menus', function (Blueprint $table) {

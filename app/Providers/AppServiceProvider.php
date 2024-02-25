@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+
+use App\Models\MainMenu;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,5 +23,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        $mainMenu = MainMenu::whereNull('parent_id')->orderBy('num')->get();
+
+        View::share('MasterMainMenu', ['key' => $mainMenu]);
     }
 }
