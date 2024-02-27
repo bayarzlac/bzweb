@@ -28,20 +28,6 @@
 
         @include('layouts.header')
 
-        <!-- Hero section -->
-        <div class="section-3xl bg-image parallax-bg" data-bg-src="../assets/images/background.jpg">
-            <div class="bg-dark-07">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 offset-md-1 col-lg-8">
-                            <h1 class="display-4 font-weight-semi-bold uppercase letter-spacing-2 line-height-140 margin-0">Grow your business with Arty</h1>
-                        </div>
-                    </div><!-- end row -->
-                </div><!-- end container -->
-            </div>
-        </div>
-        <!-- end Hero section -->
-
         @yield('content')
 
         @include('layouts.footer')

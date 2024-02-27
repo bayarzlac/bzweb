@@ -18,7 +18,7 @@ class PublicController extends Controller
         return view('index', 'mainmenu');
     }
 
-    public function menuPage($id)
+    public function menuPage($id = null)
     {
         $menuItem = MainMenu::where('id', $id)->first();
 

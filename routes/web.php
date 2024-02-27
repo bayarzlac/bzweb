@@ -7,6 +7,8 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\MenuController;
 
+use App\Http\Controllers\PublicController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +33,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/page/{id?}', [PublicController::class, 'menuPage'])->name('page');
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');

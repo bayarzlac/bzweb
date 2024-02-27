@@ -9,10 +9,8 @@
     <div class="container">
         <div class="logo">
             <h4 class="uppercase letter-spacing-2"><a href="#">Arty</a></h4>
-            <!--
-            <img class="logo-dark" src="../assets/images/your-logo-dark.jpg" alt="">
-            <img class="logo-light" src="../assets/images/your-logo-light.jpg" alt="">
-            -->
+            {{-- <img class="logo-dark" src="/bzweb/assets/images/your-logo-dark.jpg" alt="">
+            <img class="logo-light" src="/bzweb/assets/images/your-logo-light.jpg" alt=""> --}}
         </div>
         <div class="header-menu-wrapper">
             <!-- Menu -->
