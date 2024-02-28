@@ -20,9 +20,7 @@ use App\Http\Controllers\PublicController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [PublicController::class, 'index'])->name('index');
 
 Route::middleware([
     'auth:sanctum',

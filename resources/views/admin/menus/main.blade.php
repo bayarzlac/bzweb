@@ -69,13 +69,13 @@
     
 @endsection
 @section('scripts')
-<script src="{{ asset('admin_assets/js/form-validation-with-select.js') }}"></script>
+<script src="{{ asset('storage/admin_assets/js/form-validation-with-select.js') }}"></script>
 
 <!-- INTERNAL Edit-Table JS -->
-<script src="{{ asset('admin_assets/plugins/edit-table/bst-edittable.js') }}"></script>
-<script src="{{ asset('admin_assets/plugins/edit-table/edit-table.js') }}"></script>
+<script src="{{ asset('storage/admin_assets/plugins/edit-table/bst-edittable.js') }}"></script>
+<script src="{{ asset('storage/admin_assets/plugins/edit-table/edit-table.js') }}"></script>
 
 <!-- INTERNAL SUMMERNOTE Editor JS -->
-<script src="{{ asset('admin_assets/plugins/summernote/summernote1.js') }}"></script>
-<script src="{{ asset('admin_assets/js/summernote.js') }}"></script>
+<script src="{{ asset('storage/admin_assets/plugins/summernote/summernote1.js') }}"></script>
+<script src="{{ asset('storage/admin_assets/js/summernote.js') }}"></script>
 @endsection

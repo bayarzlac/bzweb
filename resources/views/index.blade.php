@@ -2,19 +2,19 @@
 @section('content')
 
     <!-- Hero section -->
-    <div class="section-3xl bg-image parallax-bg" data-bg-src="../assets/images/background.jpg">
+    <div class="section-3xl bg-image parallax-bg" data-bg-src="{{ asset('storage/images/home_bg.jpg') }}">
         <div class="bg-dark-07">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 offset-md-1 col-lg-8">
-                        <h1 class="display-4 font-weight-semi-bold uppercase letter-spacing-2 line-height-140 margin-0">Grow your business with Arty</h1>
+                        <h1 class="display-4 font-weight-semi-bold uppercase letter-spacing-2 line-height-140 margin-0">Эко бүтээгдэхүүний таны гарт хүргэе</h1>
                     </div>
                 </div><!-- end row -->
             </div><!-- end container -->
         </div>
     </div>
     <!-- end Hero section -->
-    
+
     <!-- Services section -->
     <div class="section">
         <div class="container">
@@ -25,7 +25,9 @@
                             <i class="ti-star"></i>
                         </div>
                         <h5 class="font-weight-normal">Marketing</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            {{ $homePageData['title'] }}
+                        </p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -56,7 +58,7 @@
         <div class="container">
             <div class="row col-spacing-50 align-items-center">
                 <div class="col-12 col-lg-6">
-                    <img class="box-shadow-with-hover border-radius-05" src="/bzweb/assets/images/col-1.jpg" alt="">
+                    <img class="box-shadow-with-hover border-radius-05" src="storage/assets/images/col-1.jpg" alt="">
                 </div>
                 <div class="col-12 col-lg-6">
                     <h2>Who We Are</h2>
@@ -69,14 +71,14 @@
     <!-- end About section -->
 
     <!-- Testimonial section -->
-    <div class="section-xl bg-image parallax-bg" data-bg-src="/bzweb/assets/images/background.jpg">
+    <div class="section-xl bg-image parallax-bg" data-bg-src="storage/assets/images/background.jpg">
         <div class="bg-dark-07">
             <div class="container">
                 <div class="owl-carousel testimonial-carousel" data-owl-nav="true" data-owl-items="1" data-owl-autoplay="true" data-owl-margin="30">
                     <!-- 1 -->
                     <div class="testimonial-item">
                         <div class="margin-bottom-20">
-                            <img src="/bzweb/assets/images/avatar-md.jpg" alt="">
+                            <img src="storage/assets/images/avatar-md.jpg" alt="">
                         </div>
                         <div class="margin-bottom-30">
                             <h5 class="font-weight-normal margin-0 line-height-130">Melissa Bakos</h5>
@@ -87,7 +89,7 @@
                     <!-- 2 -->
                     <div class="testimonial-item">
                         <div class="margin-bottom-20">
-                            <img src="/bzweb/assets/images/avatar-md.jpg" alt="">
+                            <img src="storage/assets/images/avatar-md.jpg" alt="">
                         </div>
                         <div class="margin-bottom-30">
                             <h5 class="font-weight-normal margin-0 line-height-130">Melissa Bakos</h5>
@@ -98,7 +100,7 @@
                     <!-- 3 -->
                     <div class="testimonial-item">
                         <div class="margin-bottom-20">
-                            <img src="/bzweb/assets/images/avatar-md.jpg" alt="">
+                            <img src="storage/assets/images/avatar-md.jpg" alt="">
                         </div>
                         <div class="margin-bottom-30">
                             <h5 class="font-weight-normal margin-0 line-height-130">Melissa Bakos</h5>
@@ -117,7 +119,7 @@
         <div class="container">
             <div class="row align-items-center col-spacing-50">
                 <div class="col-12 col-lg-6 order-lg-2">
-                    <img class="box-shadow-with-hover border-radius-05" src="/bzweb/assets/images/col-1.jpg" alt="">
+                    <img class="box-shadow-with-hover border-radius-05" src="'storage/assets/images/col-1.jpg" alt="">
                 </div>
                 <div class="col-12 col-lg-6 order-lg-1">
                     <ul class="accordion single-open style-3 rounded">
@@ -206,43 +208,43 @@
                 <!-- Client box 1 -->
                 <div class="client-box">
                     <a href="#">
-                        <img src="/bzweb/assets/images/col-5.jpg" alt="">
+                        <img src="storage/assets/images/col-5.jpg" alt="">
                     </a>
                 </div>
                 <!-- Client box 2 -->
                 <div class="client-box">
                     <a href="#">
-                        <img src="/bzweb/assets/images/col-5.jpg" alt="">
+                        <img src="storage/assets/images/col-5.jpg" alt="">
                     </a>
                 </div>
                 <!-- Client box 3 -->
                 <div class="client-box">
                     <a href="#">
-                        <img src="/bzweb/assets/images/col-5.jpg" alt="">
+                        <img src="storage/assets/images/col-5.jpg" alt="">
                     </a>
                 </div>
                 <!-- Client box 4 -->
                 <div class="client-box">
                     <a href="#">
-                        <img src="/bzweb/assets/images/col-5.jpg" alt="">
+                        <img src="storage/assets/images/col-5.jpg" alt="">
                     </a>
                 </div>
                 <!-- Client box 5 -->
                 <div class="client-box">
                     <a href="#">
-                        <img src="/bzweb/assets/images/col-5.jpg" alt="">
+                        <img src="storage/assets/images/col-5.jpg" alt="">
                     </a>
                 </div>
                 <!-- Client box 6 -->
                 <div class="client-box">
                     <a href="#">
-                        <img src="/bzweb/assets/images/col-5.jpg" alt="">
+                        <img src="storage/assets/images/col-5.jpg" alt="">
                     </a>
                 </div>
                 <!-- Client box 7 -->
                 <div class="client-box">
                     <a href="#">
-                        <img src="/bzweb/assets/images/col-5.jpg" alt="">
+                        <img src="storage/assets/images/col-5.jpg" alt="">
                     </a>
                 </div>
             </div><!-- end owl-carousel -->

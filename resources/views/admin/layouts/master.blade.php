@@ -13,25 +13,25 @@
         content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin_assets/images/brand/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/admin_assets/images/brand/favicon.ico') }}" />
 
     <!-- TITLE -->
     <title>Sash – Bootstrap 5 Admin & Dashboard Template </title>
 
     <!-- BOOTSTRAP CSS -->
-    <link id="style" href="{{ asset('admin_assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link id="style" href="{{ asset('storage/admin_assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link href="{{ asset('admin_assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('admin_assets/css/dark-style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('admin_assets/css/transparent-style.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin_assets/css/skin-modes.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/dark-style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/transparent-style.css') }}" rel="stylesheet">
+    <link href="{{ asset('storage/admin_assets/css/skin-modes.css') }}" rel="stylesheet" />
 
     <!--- FONT-ICONS CSS -->
-    <link href="{{ asset('admin_assets/css/icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{ asset('admin_assets/colors/color1.css') }}" />
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{ asset('storage/admin_assets/colors/color1.css') }}" />
     @yield('styles')
 </head>
 
@@ -39,7 +39,7 @@
 
     <!-- GLOBAL-LOADER -->
     <div id="global-loader">
-        <img src="{{ asset('admin_assets/images/loader.svg')}}" class="loader-img" alt="Loader">
+        <img src="{{ asset('storage/admin_assets/images/loader.svg')}}" class="loader-img" alt="Loader">
     </div>
     <!-- /GLOBAL-LOADER -->
 

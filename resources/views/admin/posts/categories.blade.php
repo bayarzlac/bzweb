@@ -78,13 +78,13 @@
 @endsection
 @section('scripts')
     <!-- FORMVALIDATION JS -->
-    <script src="{{ asset('admin_assets/js/form-validation-with-select.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/form-validation-with-select.js') }}"></script>
 
     <!-- INTERNAL SELECT2 JS -->
-    <script src="{{ asset('admin_assets/plugins/select2/select2.full.min.js') }}"></script>
-    <script src="{{ asset('admin_assets/js/select2.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/select2/select2.full.min.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/select2.js') }}"></script>
 
     <!-- INTERNAL Edit-Table JS -->
-    <script src="{{ asset('admin_assets/plugins/edit-table/bst-edittable.js') }}"></script>
-    <script src="{{ asset('admin_assets/plugins/edit-table/edit-table.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/edit-table/bst-edittable.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/edit-table/edit-table.js') }}"></script>
 @endsection

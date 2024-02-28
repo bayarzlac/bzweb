@@ -3,19 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 use App\Models\MainMenu;
 use App\Models\Posts;
 use App\Models\PostCategories;
+
 
 class PublicController extends Controller
 {
     //
     public function index() 
     {
-        $mainmenu = MainMenu::whereNull('parent_id')->orderBy('num')->get();
+        $jsonPath = public_path('storage/homePage.json');
 
-        return view('index', 'mainmenu');
+        if (File::exists($jsonPath)) {
+            $jsonData = file_get_contents($jsonPath);
+            $homePageData = json_decode($jsonData, true);
+
+            return view('index', compact('homePageData'));
+        } 
+        else {
+            return response()->json(['error' => 'JSON file not found'], 404);
+        }
     }
 
     public function menuPage($id = null)

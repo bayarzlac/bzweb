@@ -49,6 +49,6 @@
 @endsection
 @section('scripts')
     <!-- INTERNAL Edit-Table JS -->
-    <script src="{{ asset('admin_assets/plugins/edit-table/bst-edittable.js') }}"></script>
-    <script src="{{ asset('admin_assets/plugins/edit-table/edit-table.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/edit-table/bst-edittable.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/edit-table/edit-table.js') }}"></script>
 @endsection
