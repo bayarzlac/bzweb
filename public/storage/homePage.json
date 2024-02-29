@@ -1,0 +1,14 @@
+{
+    "title": "Фипак ХХК", 
+    "header": {
+        "title": "Нүүр хуудас", 
+        "imgUrl": "storage/images/home_bg.jpg"
+    }, 
+    "customers": [
+        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
+        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
+        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
+        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
+        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }
+    ]
+}
