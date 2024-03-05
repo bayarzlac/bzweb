@@ -13,10 +13,10 @@
         content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/admin_assets/images/brand/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/favicon.ico') }}" />
 
     <!-- TITLE -->
-    <title>Sash – Bootstrap 5 Admin & Dashboard Template </title>
+    <title>Веб сайтын удирдлагын хэсэг</title>
 
     <!-- BOOTSTRAP CSS -->
     <link id="style" href="{{ asset('storage/admin_assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />

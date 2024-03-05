@@ -8,7 +8,7 @@
     <meta name="keywords" content="">
     <title>Finpack</title>
     <!-- Favicon -->
-    <link href="{{ asset('storage/assets/images/favicon.png') }}" rel="shortcut icon">
+    <link href="{{ asset('storage/favicon.ico') }}" rel="shortcut icon">
     <!-- CSS -->
     <link href="{{ asset('storage/assets/plugins/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('storage/assets/plugins/magnific-popup/magnific-popup.min.css') }}" rel="stylesheet">

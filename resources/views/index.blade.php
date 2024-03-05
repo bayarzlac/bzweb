@@ -7,7 +7,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 offset-md-1 col-lg-8">
-                        <h1 class="display-4 font-weight-semi-bold uppercase letter-spacing-2 line-height-140 margin-0">Эко бүтээгдэхүүний таны гарт хүргэе</h1>
+                        <h1 class="display-4 font-weight-semi-bold uppercase letter-spacing-2 line-height-140 margin-0">
+                            {{ $homePageData['header']['title'] }}
+                        </h1>
                     </div>
                 </div><!-- end row -->
             </div><!-- end container -->
@@ -24,9 +26,11 @@
                         <div class="sf-box-icon">
                             <i class="ti-star"></i>
                         </div>
-                        <h5 class="font-weight-normal">Marketing</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            {{ $homePageData['title'] }}
+                        <h5 class="font-weight-normal">
+                            {{ $homePageData['intro']['section1']['title'] }}
+                        </h5>
+                        <p>
+                            {{ $homePageData['intro']['section1']['content'] }}
                         </p>
                     </div>
                 </div>
@@ -35,8 +39,10 @@
                         <div class="sf-box-icon">
                             <i class="ti-comment-alt"></i>
                         </div>
-                        <h5 class="font-weight-normal">Consulting</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        <h5 class="font-weight-normal">
+                            {{ $homePageData['intro']['section2']['title'] }}
+                        </h5>
+                        <p>{{ $homePageData['intro']['section2']['content'] }}</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -44,8 +50,10 @@
                         <div class="sf-box-icon">
                             <i class="ti-announcement"></i>
                         </div>
-                        <h5 class="font-weight-normal">Branding</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        <h5 class="font-weight-normal">
+                            {{ $homePageData['intro']['section3']['title'] }}
+                        </h5>
+                        <p>{{ $homePageData['intro']['section3']['content'] }}</p>
                     </div>
                 </div>
             </div><!-- end row -->
@@ -61,9 +69,9 @@
                     <img class="box-shadow-with-hover border-radius-05" src="storage/assets/images/col-1.jpg" alt="">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <h2>Who We Are</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <a class="button-text-2 margin-top-30" href="#">Read more</a>
+                    <h2>{{ $homePageData['shortIntro']['title'] }}</h2>
+                    <p>{{ $homePageData['shortIntro']['content'] }}</p>
+                    <a class="button-text-2 margin-top-30" href="{{ $homePageData['shortIntro']['link'] }}">Дэлгэрэнгүй</a>
                 </div>
             </div><!-- end row -->
         </div><!-- end container -->
@@ -77,9 +85,9 @@
                 <div class="owl-carousel testimonial-carousel" data-owl-nav="true" data-owl-items="1" data-owl-autoplay="true" data-owl-margin="30">
                     <!-- 1 -->
                     <div class="testimonial-item">
-                        <div class="margin-bottom-20">
+                        {{-- <div class="margin-bottom-20">
                             <img src="storage/assets/images/avatar-md.jpg" alt="">
-                        </div>
+                        </div> --}}
                         <div class="margin-bottom-30">
                             <h5 class="font-weight-normal margin-0 line-height-130">Melissa Bakos</h5>
                             <span class="font-small">Marketer - Arty</span>
@@ -88,9 +96,9 @@
                     </div>
                     <!-- 2 -->
                     <div class="testimonial-item">
-                        <div class="margin-bottom-20">
+                        {{-- <div class="margin-bottom-20">
                             <img src="storage/assets/images/avatar-md.jpg" alt="">
-                        </div>
+                        </div> --}}
                         <div class="margin-bottom-30">
                             <h5 class="font-weight-normal margin-0 line-height-130">Melissa Bakos</h5>
                             <span class="font-small">Marketer - Arty</span>
@@ -99,9 +107,9 @@
                     </div>
                     <!-- 3 -->
                     <div class="testimonial-item">
-                        <div class="margin-bottom-20">
+                        {{-- <div class="margin-bottom-20">
                             <img src="storage/assets/images/avatar-md.jpg" alt="">
-                        </div>
+                        </div> --}}
                         <div class="margin-bottom-30">
                             <h5 class="font-weight-normal margin-0 line-height-130">Melissa Bakos</h5>
                             <span class="font-small">Marketer - Arty</span>

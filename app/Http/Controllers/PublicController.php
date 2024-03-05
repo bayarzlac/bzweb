@@ -22,7 +22,7 @@ class PublicController extends Controller
             $homePageData = json_decode($jsonData, true);
 
             return view('index', compact('homePageData'));
-        } 
+        }
         else {
             return response()->json(['error' => 'JSON file not found'], 404);
         }

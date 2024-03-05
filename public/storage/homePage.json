@@ -1,9 +1,29 @@
 {
-    "title": "Фипак ХХК", 
+    "title": "Финпак ХХК", 
     "header": {
-        "title": "Нүүр хуудас", 
+        "title": "Эко бүтээгдэхүүнийг таны гарт хүргэе", 
         "imgUrl": "storage/images/home_bg.jpg"
     }, 
+    "intro": {
+        "section1": {
+            "title": "Зорилго", 
+            "content": "Байгаль Эх”-д ээлтэй экологийн цэвэр бүтээгдэхүүнээр хэрэглэгчдийн хэрэгцээ шаардлагад нийцсэн чанар, стандартыг бий болгоход оршино."
+        }, 
+        "section2": {
+            "title": "", 
+            "content": ""
+        },
+        "section3": {
+            "title": "", 
+            "content": ""
+        }
+    },
+    "shortIntro": {
+        "title": "Бидний тухай", 
+        "content": "“ФИНПАК” ХХК нь 2001 онд долоон хүний бүрэлдэхүүнтэйгээр хэвлэлийн түүхий эд, материалыг бэлтгэн нийлүүлэгч байгууллагаар үйл ажиллагааныхаа гарааг эхэлж байсан билээ. ", 
+        "imgUrl": "",
+        "link": "#"
+    },
     "customers": [
         { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
         { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
@@ -12,3 +32,4 @@
         { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }
     ]
 }
+

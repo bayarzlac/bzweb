@@ -8,9 +8,11 @@
 <div class="header absolute-light fixed">
     <div class="container">
         <div class="logo">
-            <h4 class="uppercase letter-spacing-2"><a href="#">Arty</a></h4>
+            {{-- <h4 class="uppercase letter-spacing-2"><a href="#">Arty</a></h4> --}}
             {{-- <img class="logo-dark" src="/bzweb/assets/images/your-logo-dark.jpg" alt="">
             <img class="logo-light" src="/bzweb/assets/images/your-logo-light.jpg" alt=""> --}}
+            <img class="logo-dark" src="{{ asset('storage/logo_dark.png') }}" alt="">
+            <img class="logo-light" src="{{ asset('storage/logo_light.png') }}" alt="">
         </div>
         <div class="header-menu-wrapper">
             <!-- Menu -->
@@ -25,8 +27,7 @@
             <!-- Extra -->
             <div class="header-menu-extra">
                 <ul class="list-inline">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/finpackmn"><i class="fab fa-facebook-f"></i></a></li>
                 </ul>
             </div>
             <!-- Close Button -->

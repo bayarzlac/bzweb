@@ -11,26 +11,26 @@
     <meta name="keywords" content="admin,admin dashboard,admin panel">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin_assets/images/brand/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/admin_assets/images/brand/favicon.ico') }}" />
 
     <!-- TITLE -->
     <title>Finpack - Admin Panel</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link id="style" href="{{ asset('admin_assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link id="style" href="{{ asset('storage/admin_assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link href="{{ asset('admin_assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('admin_assets/css/dark-style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('admin_assets/css/transparent-style.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin_assets/css/skin-modes.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/dark-style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/transparent-style.css') }}" rel="stylesheet">
+    <link href="{{ asset('storage/admin_assets/css/skin-modes.css') }}" rel="stylesheet" />
 
     <!--- FONT-ICONS CSS -->
-    <link href="{{ asset('admin_assets/css/icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('storage/admin_assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all"
-        href="{{ asset('admin_assets/colors/color1.css') }}" />
+        href="{{ asset('storage/admin_assets/colors/color1.css') }}" />
 </head>
 
 <body class="app sidebar-mini ltr login-img">
@@ -39,7 +39,7 @@
 
         <!-- GLOABAL LOADER -->
         <div id="global-loader">
-            <img src="{{ asset('admin_assets/images/loader.svg') }}" class="loader-img" alt="Loader">
+            <img src="{{ asset('storage/admin_assets/images/loader.svg') }}" class="loader-img" alt="Loader">
         </div>
         <!-- /GLOABAL LOADER -->
 
@@ -49,7 +49,7 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="{{ asset('admin_assets/images/brand/logo-white.png') }}"
+                        <a href="index.html"><img src="{{ asset('storage/admin_assets/images/brand/logo-white.png') }}"
                                 class="header-brand-img" alt=""></a>
                     </div>
                 </div>
@@ -129,32 +129,32 @@
     <!-- BACKGROUND-IMAGE CLOSED -->
 
     <!-- JQUERY JS -->
-    <script src="{{ asset('admin_assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/jquery.min.js') }}"></script>
 
     <!-- BOOTSTRAP JS -->
-    <script src="{{ asset('admin_assets/plugins/bootstrap/js/popper.min.js') }}"></script>
-    <script src="{{ asset('admin_assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/bootstrap/js/popper.min.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
 
     <!-- SHOW PASSWORD JS -->
-    <script src="{{ asset('admin_assets/js/show-password.min.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/show-password.min.js') }}"></script>
 
     <!-- GENERATE OTP JS -->
-    <script src="{{ asset('admin_assets/js/generate-otp.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/generate-otp.js') }}"></script>
 
     <!-- Perfect SCROLLBAR JS-->
-    <script src="{{ asset('admin_assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script>
 
     <!-- Color Theme js -->
-    <script src="{{ asset('admin_assets/js/themeColors.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/themeColors.js') }}"></script>
 
     <!-- CUSTOM JS -->
-    <script src="{{ asset('admin_assets/js/custom.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/custom.js') }}"></script>
 
     <!-- FORMVALIDATION JS SELECT ashiglaagui uyd duudah validation -->
-    <script src="{{ asset('admin_assets/js/form-validation-without-select.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/form-validation-without-select.js') }}"></script>
 
     <!-- INPUT MASK JS-->
-    <script src="{{ asset('admin_assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
 </body>
 
 </html>
