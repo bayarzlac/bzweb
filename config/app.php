@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://finpack.mn/mn'),
 
     'asset_url' => env('ASSET_URL'),
 
