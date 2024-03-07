@@ -20,14 +20,12 @@
                 <li class="m-item">
                     <a class="m-link" href="{{ route('index') }}">Эхлэл</a>
                 </li>
-
                 @include('layouts.nav', ['mainmenu' => $MasterMainMenu['key']])
-                
             </ul>
             <!-- Extra -->
             <div class="header-menu-extra">
                 <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/finpackmn"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="{{ $homeData['social']['facebook'] ? $homeData['social']['facebook'] : '#' }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                 </ul>
             </div>
             <!-- Close Button -->

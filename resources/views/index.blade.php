@@ -66,12 +66,12 @@
         <div class="container">
             <div class="row col-spacing-50 align-items-center">
                 <div class="col-12 col-lg-6">
-                    <img class="box-shadow-with-hover border-radius-05" src="storage/assets/images/col-1.jpg" alt="">
+                    <img class="box-shadow-with-hover border-radius-05" src="{{ $homeData['shortIntro']['imgUrl'] }}" alt="">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <h2>{{ $homePageData['shortIntro']['title'] }}</h2>
-                    <p>{{ $homePageData['shortIntro']['content'] }}</p>
-                    <a class="button-text-2 margin-top-30" href="{{ $homePageData['shortIntro']['link'] }}">Дэлгэрэнгүй</a>
+                    <h2>{{ $homeData['shortIntro']['title'] }}</h2>
+                    <p>{{ $homeData['shortIntro']['content'] }}</p>
+                    <a class="button-text-2 margin-top-30" href="{{ $homeData['shortIntro']['link'] }}">Дэлгэрэнгүй</a>
                 </div>
             </div><!-- end row -->
         </div><!-- end container -->
@@ -213,48 +213,14 @@
     <div class="section-sm bg-light-gray">
         <div class="container text-center">
             <div class="owl-carousel" data-owl-dots="false" data-owl-nav="true" data-owl-margin="50" data-owl-autoPlay="true" data-owl-xs="1" data-owl-sm="2" data-owl-md="3" data-owl-lg="4" data-owl-xl="5">
-                <!-- Client box 1 -->
+                {{-- {{ $homePageData }} --}}
+                @foreach ($homeData['customers'] as $item)
                 <div class="client-box">
                     <a href="#">
-                        <img src="storage/assets/images/col-5.jpg" alt="">
+                        <img src="{{ asset($item['logoUrl']) }}" alt="">
                     </a>
                 </div>
-                <!-- Client box 2 -->
-                <div class="client-box">
-                    <a href="#">
-                        <img src="storage/assets/images/col-5.jpg" alt="">
-                    </a>
-                </div>
-                <!-- Client box 3 -->
-                <div class="client-box">
-                    <a href="#">
-                        <img src="storage/assets/images/col-5.jpg" alt="">
-                    </a>
-                </div>
-                <!-- Client box 4 -->
-                <div class="client-box">
-                    <a href="#">
-                        <img src="storage/assets/images/col-5.jpg" alt="">
-                    </a>
-                </div>
-                <!-- Client box 5 -->
-                <div class="client-box">
-                    <a href="#">
-                        <img src="storage/assets/images/col-5.jpg" alt="">
-                    </a>
-                </div>
-                <!-- Client box 6 -->
-                <div class="client-box">
-                    <a href="#">
-                        <img src="storage/assets/images/col-5.jpg" alt="">
-                    </a>
-                </div>
-                <!-- Client box 7 -->
-                <div class="client-box">
-                    <a href="#">
-                        <img src="storage/assets/images/col-5.jpg" alt="">
-                    </a>
-                </div>
+                @endforeach
             </div><!-- end owl-carousel -->
         </div><!-- end container -->
     </div>

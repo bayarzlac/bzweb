@@ -30,9 +30,13 @@
                 </ul>
             </div>
             <div class="col-6 col-lg-3 text-lg-right">
-                <p class="font-lg-small">121 King St, Melbourne VIC 3000<br>contact@example.com</p>
+                <p class="font-lg-small">{{ $homeData['footer']['address'] }}</p>
+                <p class="font-lg-small">{{ $homeData['footer']['phone'] }}</p>
+                <p class="font-lg-small">
+                    <a href = "mailto: {{ $homeData['footer']['email'] }}">{{ $homeData['footer']['email'] }}</a>    
+                </p>
                 <ul class="list-inline-sm margin-top-10 margin-lg-top-20">
-                    <li><a class="button-circle button-circle-xs button-circle-white" href="#"><i
+                    <li><a class="button-circle button-circle-xs button-circle-white" href="{{ $homeData['social']['facebook'] }}"><i
                                 class="fab fa-facebook-f"></i></a></li>
                     <li><a class="button-circle button-circle-xs button-circle-white" href="#"><i
                                 class="fab fa-twitter"></i></a></li>
@@ -44,7 +48,7 @@
         <div class="border-top margin-top-30 padding-y-20 padding-bottom-0">
             <div class="row align-items-center">
                 <div class="col-6">
-                    <h4 class="uppercase letter-spacing-2 margin-0">Arty</h4>
+                    <h4 class="uppercase letter-spacing-2 margin-0">Finpack</h4>
                 </div>
                 <div class="col-6 text-right">
                     <p>2024 © Финпак</p>

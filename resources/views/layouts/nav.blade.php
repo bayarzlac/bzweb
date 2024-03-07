@@ -1,7 +1,7 @@
 @foreach ($mainmenu as $item)
     @if ($item->parent_id)
         <li class="m-dropdown-item">
-            <a class="m-dropdown-link" href="#">{{ $item->title }}</a>
+            <a class="m-dropdown-link" href="{{ $item->description ? route('page', $item->id) : '#' }}">{{ $item->title }}</a>
             
             @if ($item->children->count() > 0)
                 <ul class="m-subdropdown">

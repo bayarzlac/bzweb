@@ -21,15 +21,28 @@
     "shortIntro": {
         "title": "Бидний тухай", 
         "content": "“ФИНПАК” ХХК нь 2001 онд долоон хүний бүрэлдэхүүнтэйгээр хэвлэлийн түүхий эд, материалыг бэлтгэн нийлүүлэгч байгууллагаар үйл ажиллагааныхаа гарааг эхэлж байсан билээ. ", 
-        "imgUrl": "",
+        "imgUrl": "storage/images/about_us.jpg",
         "link": "#"
     },
     "customers": [
-        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
-        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
-        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
-        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }, 
-        { "logoUrl": "storage/assets/images/col-5.jpg", "webUrl": "www.apu.mn" }
-    ]
-}
+        { "logoUrl": "storage/images/logos/logo1.png", "webUrl": "www.apu.mn" },
+        { "logoUrl": "storage/images/logos/logo2.png", "webUrl": "www.apu.mn" },
+        { "logoUrl": "storage/images/logos/logo3.png", "webUrl": "www.apu.mn" },
+        { "logoUrl": "storage/images/logos/logo4.png", "webUrl": "www.apu.mn" },
+        { "logoUrl": "storage/images/logos/logo5.png", "webUrl": "www.apu.mn" },
+        { "logoUrl": "storage/images/logos/logo6.png", "webUrl": "www.apu.mn" },
+        { "logoUrl": "storage/images/logos/logo7.png", "webUrl": "www.apu.mn" },
+        { "logoUrl": "storage/images/logos/logo8.png", "webUrl": "www.apu.mn" }
+    ], 
 
+    "footer": {
+        "title": "Финпак",
+        "address": "Баянгол дүүрэг, XX хороо, Сонсголонгийн гудамж, Автобус-2 компанийн замын зүүн талд. ",
+        "email": "info@finpack.mn",
+        "phone": "99009038, 99904008, 99904018, 99904028"
+    }, 
+
+    "social": {
+        "facebook": "https://www.facebook.com/finpackmn"
+    }
+}
