@@ -79,6 +79,19 @@
                         <li><a href="{{ route('admin.posts.new') }}" class="slide-item {{ request()->is('admin/posts/new') ? 'active' : '' }}"> Агуулга нэмэх</a></li>
                     </ul>
                 </li>
+                <li class="slide {{ request()->is('admin/widgets*') ? 'is-expanded' : '' }}">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
+                        <i class="side-menu__icon fe fe-edit"></i>
+                        <span class="side-menu__label">Веб хэсгүүд</span>
+                        <i class="angle fe fe-chevron-right"></i>
+                    </a>
+                    <ul class="slide-menu">
+                        <li class="side-menu-label1"><a href="javascript:void(0)">Хэсгүүд</a></li>
+                        <li><a href="{{ route('admin.widgets') }}" class="slide-item {{ request()->is('admin/widgets') ? 'active' : '' }}"> Хэсгүүд</a></li>
+                        <li><a href="{{ route('admin.widgets.edit') }}" class="slide-item {{ request()->is('admin/widgets/edit') ? 'active' : '' }}"> Хэсэг нэмэх</a></li>
+                    </ul>
+                </li>
+                
             </ul>
             <div class="slide-right" id="slide-right">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">

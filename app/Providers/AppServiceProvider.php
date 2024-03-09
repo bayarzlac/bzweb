@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\File;
 
 use App\Models\MainMenu;
+use App\Models\ProductCategories;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,7 +26,9 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         $mainMenu = MainMenu::whereNull('parent_id')->orderBy('num')->get();
+        $productMenu = ProductCategories::whereNull('parent_id')->orderBy('num')->get();
 
-        View::share('MasterMainMenu', ['key' => $mainMenu]);
+        View::share('MasterMainMenu', ['mainMenu' => $mainMenu, 'productMenu' => $productMenu]);
+        
     }
 }

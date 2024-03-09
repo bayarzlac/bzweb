@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\WidgetController;
 
 use App\Http\Controllers\PublicController;
 
@@ -33,6 +34,7 @@ Route::middleware([
 });
 
 Route::get('/page/{id?}', [PublicController::class, 'menuPage'])->name('page');
+Route::get('/products/{id?}', [PublicController::class, 'products'])->name('products');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group(function () {
@@ -55,5 +57,9 @@ Route::group(['middleware' => ['auth']], function () {
     
         Route::get('/menus/main', [MenuController::class, 'main'])->name('admin.menus.main');
         Route::post('/menus/store_main', [MenuController::class, 'store_main'])->name('admin.menus.main.store');
+
+        Route::get('/widgets', [WidgetController::class, 'index'])->name('admin.widgets');
+        Route::get('/widgets/edit/{id?}', [WidgetController::class, 'edit'])->name('admin.widgets.edit');
+        Route::post('/widgets/createOrUpdate', [WidgetController::class, 'createOrUpdate'])->name('admin.widgets.createOrUpdate');
     });
 });

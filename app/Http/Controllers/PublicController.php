@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\File;
 use App\Models\MainMenu;
 use App\Models\Posts;
 use App\Models\PostCategories;
+use App\Models\ProductCategories;
+use App\Models\Products;
+use App\Models\ProductsToCategories;
 
 
 class PublicController extends Controller
@@ -47,5 +50,30 @@ class PublicController extends Controller
         $category = PostCategories::where('id', $id)->first();
 
         return view('category', compact('category'));
+    }
+
+    public function product($id)
+    {
+
+        return view('product');
+    }
+
+    public function products($id = null) 
+    {
+        $products = null;
+
+        if ($id) {
+            $products = Products::select('products.id', 'products.titel', 'products.price', 'products.price_visiblity', 'products.created_at')
+                ->join('products_to_categories', 'products_to_categories.product_id', '=', 'products.id')
+                ->where('products_to_categories.product_category_id', $id)
+                ->paginate(9);
+        }
+        else {
+            $products = Products::select('products.id', 'products.titel', 'products.price', 'products.price_visiblity', 'products.created_at')
+                ->join('products_to_categories', 'products_to_categories.product_id', '=', 'products.id')
+                ->paginate(9);
+        }
+
+        return view('productCategory', compact('products'));
     }
 }

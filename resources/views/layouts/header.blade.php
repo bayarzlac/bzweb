@@ -20,7 +20,13 @@
                 <li class="m-item">
                     <a class="m-link" href="{{ route('index') }}">Эхлэл</a>
                 </li>
-                @include('layouts.nav', ['mainmenu' => $MasterMainMenu['key']])
+                @include('layouts.nav', ['mainmenu' => $MasterMainMenu['mainMenu']])
+                <li class="m-item">
+                    <a href="{{ route('products') }}" class="m-link">Бараа</a>
+                    <ul class="m-dropdown">
+                        @include('layouts.navProduct', ['productMenu' => $MasterMainMenu['productMenu']])
+                    </ul>
+                </li>
             </ul>
             <!-- Extra -->
             <div class="header-menu-extra">

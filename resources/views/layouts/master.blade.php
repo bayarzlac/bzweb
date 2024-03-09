@@ -21,17 +21,17 @@
     <link href="{{ asset('storage/assets/plugins/font-awesome/css/all.css') }}" rel="stylesheet">
     <link href="{{ asset('storage/assets/plugins/themify/themify-icons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('storage/assets/plugins/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+
+    {{-- Theme Arty - business-1 --}}
 </head>
 
 <body data-preloader="4">
     <div class="wrapper">
-
         @include('layouts.header')
 
         @yield('content')
 
         @include('layouts.footer')
-        
     </div><!-- end wrapper -->
     
     <!-- ***** JAVASCRIPTS ***** -->
