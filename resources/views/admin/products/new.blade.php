@@ -13,8 +13,7 @@
                         @include('admin.layouts.alert')
                     </div>
 
-                    <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data" 
-                        class="needs-validation" novalidate>
+                    <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
                         @csrf
                         <div class="form-row">
                             <div class="col-xl-8">
@@ -52,15 +51,17 @@
                             </div>
                             <div class="col-xl-4 px-5">
                                 <div class="form-group">
+                                    <label class="form-label">Барааны зургууд</label>
+                                    <input id="demo" type="file" name="files[]" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                </div>
+                                
+                                <div class="form-group">
                                     <label class="form-label">Хамаарах ангилал</label>
                                     <div class="custom-controls-stacked">
                                         @include('admin.products.checkTree', ['categories' => $rootCategories])
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">Барааны зургууд</label>
-                                    <input id="demo" type="file" name="files[]" accept=".jpg, .png, image/jpeg, image/png" multiple>
-                                </div>
+                                
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary mb-3">Хадгалах</button>

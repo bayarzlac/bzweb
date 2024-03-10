@@ -87,12 +87,16 @@ class ProductsController extends Controller
         //     return redirect()->back()->with('warning', 'ee huurhii aldaa');
         // }
 
-        $count = 0;
+        // $count = 0;
 
-        foreach ($request->file('files') as $file) {
-            $count += 1;
-        }
+        // if ($request->hasFile('files')) {
+        //     foreach ($request->file('files') as $file) {
+        //         $count += 1;
+        //     }
+        // }
 
-        return $count;
+        // return $count;
+
+        dd($request->all());
     }
 }
