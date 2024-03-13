@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Models\ProductCategories;
 use App\Models\ProductsToCategories;
 use App\Models\Products;
+use App\Models\ProductImages;
 
 use App\Exceptions\InvalidOrderException;
 
@@ -61,41 +63,47 @@ class ProductsController extends Controller
 
     public function store(Request $request)
     {
-        // $product = Products::where('title', '=', $request->title)->first();
+        $product = Products::where('title', '=', $request->title)->first();
 
-        // if ($product) {
-        //     return redirect()->back()->with('danger', 'Ийм нэртэй бараа, бүтээгдэхүүн бүртгэгдсэн байна.');
-        // }
+        $p_visibility = $request->price_visibility ? $request->price_visibility : 0;
 
-        // $product = Products::create([
-        //     'title' => $request->title,
-        //     'price' => $request->price, 
-        //     'description' => $request->description
-        // ]);
+        if ($product) {
+            return redirect()->back()->with('danger', 'Ийм нэртэй бараа, бүтээгдэхүүн бүртгэгдсэн байна.');
+        }
+        else {
+            $product = Products::create([
+                'title' => $request->title,
+                'price' => $request->price, 
+                'description' => $request->description, 
+                'price_visibility' => $request->price_visibility
+            ]);
 
-        // if ($product) {
-        //     foreach ($request->categories as $key => $value) {
-        //         ProductsToCategories::create([
-        //             'product_id' => $product->id, 
-        //             'product_category_id' => $value
-        //         ]);
-        //     }
+            if ($product) {
+                foreach ($request->categories as $key => $value) {
+                    ProductsToCategories::create([
+                        'product_id' => $product->id, 
+                        'product_category_id' => $value
+                    ]);
+                }
 
-        //     return redirect()->back()->with('success', 'bolson shuu gugshuun');
-        // }
-        // else {
-        //     return redirect()->back()->with('warning', 'ee huurhii aldaa');
-        // }
+                if ($request->hasFile('files')) {
+                    foreach ($request->file('files') as $file) {
+                        $filename = substr(Str::uuid(), 0, 8) . '.jpg';
+                        $file->move(public_path('storage/products'), $filename);
 
-        // $count = 0;
-
-        // if ($request->hasFile('files')) {
-        //     foreach ($request->file('files') as $file) {
-        //         $count += 1;
-        //     }
-        // }
-
-        // return $count;
+                        ProductImages::create([
+                            'path' => 'storage/products/' . $filename,
+                            'product_id' => $product->id
+                        ]);
+                    }
+                }
+    
+                return redirect()->back()->with('success', 'Бараа, бүтээгдэхүүний мэдээлэл хадгалагдлаа');
+            }
+            else {
+                return redirect()->back()->with('warning', 'Мэдээлэл оруулах үед алдаа гарлаа');
+            }
+        }
 
         dd($request->all());
     }

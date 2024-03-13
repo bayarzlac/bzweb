@@ -63,13 +63,14 @@ class PublicController extends Controller
         $products = null;
 
         if ($id) {
-            $products = Products::select('products.id', 'products.titel', 'products.price', 'products.price_visiblity', 'products.created_at')
+            $products = Products::select('products.id', 'products.title', 'products.price', 'products.price_visibility', 'product_images.path', 'products.created_at')
                 ->join('products_to_categories', 'products_to_categories.product_id', '=', 'products.id')
+                ->join('product_images', 'product_images.product_id', '=', 'products.id')
                 ->where('products_to_categories.product_category_id', $id)
                 ->paginate(9);
         }
         else {
-            $products = Products::select('products.id', 'products.titel', 'products.price', 'products.price_visiblity', 'products.created_at')
+            $products = Products::select('products.id', 'products.title', 'products.price', 'products.price_visibility', 'products.created_at')
                 ->join('products_to_categories', 'products_to_categories.product_id', '=', 'products.id')
                 ->paginate(9);
         }

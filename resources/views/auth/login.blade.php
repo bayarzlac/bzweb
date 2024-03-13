@@ -49,7 +49,7 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="{{ asset('storage/admin_assets/images/brand/logo-white.png') }}"
+                        <a href="index.html"><img src="{{ asset('storage/logo1.png') }}"
                                 class="header-brand-img" alt=""></a>
                     </div>
                 </div>

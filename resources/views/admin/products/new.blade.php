@@ -34,7 +34,7 @@
                                         <div class="form-group">
                                             <label class="form-label">Үнэ харуулах</label>
                                             <label class="custom-control custom-checkbox-md">
-                                                <input type="checkbox" class="custom-control-input" name="price_visibility" value="option5">
+                                                <input type="checkbox" class="custom-control-input" name="price_visibility" value="1">
                                                 <span class="custom-control-label">Харагдах</span>
                                             </label>
                                         </div>
@@ -52,7 +52,7 @@
                             <div class="col-xl-4 px-5">
                                 <div class="form-group">
                                     <label class="form-label">Барааны зургууд</label>
-                                    <input id="demo" type="file" name="files[]" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                    <input class="form-control" type="file" name="files[]" accept=".jpg, .png, image/jpeg, image/png" multiple>
                                 </div>
                                 
                                 <div class="form-group">
@@ -61,7 +61,6 @@
                                         @include('admin.products.checkTree', ['categories' => $rootCategories])
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary mb-3">Хадгалах</button>
@@ -80,8 +79,8 @@
     <script src="{{ asset('storage/admin_assets/js/form-validation-without-select.js') }}"></script>
 
     <!-- FILE UPLOADES JS -->
-    {{-- <script src="{{ asset('storage/admin_assets/plugins/fileuploads/js/fileupload.js') }}"></script>
-    <script src="{{ asset('storage/admin_assets/plugins/fileuploads/js/file-upload.js') }}"></script> --}}
+    <script src="{{ asset('storage/admin_assets/plugins/fileuploads/js/fileupload.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/plugins/fileuploads/js/file-upload.js') }}"></script>
 
     <!-- INTERNAL File-Uploads Js-->
     <script src="{{ asset('storage/admin_assets/plugins/fancyuploder/jquery.ui.widget.js') }}"></script>
@@ -97,6 +96,6 @@
     {{-- <script src="{{ asset('storage/admin_assets/plugins/multi/multi.min.js') }}"></script> --}}
 
     <!-- FORMELEMENTS JS -->
-    {{-- <script src="{{ asset('storage/admin_assets/js/formelementadvnced.js') }}"></script>
-    <script src="{{ asset('storage/admin_assets/js/form-elements.js') }}"></script> --}}
+    <script src="{{ asset('storage/admin_assets/js/formelementadvnced.js') }}"></script>
+    <script src="{{ asset('storage/admin_assets/js/form-elements.js') }}"></script>
 @endsection

@@ -53,9 +53,9 @@ class PostController extends Controller
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $filename = substr(Str::uuid(), 0, 8) . '.jpg';
-            $file->move(public_path('headers'), $filename);
+            $file->move(public_path('storage/headers'), $filename);
 
-            $img_path = 'headers/' . $filename;
+            $img_path = 'storage/headers/' . $filename;
         }
 
         $post = Posts::create([

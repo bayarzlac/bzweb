@@ -27,26 +27,23 @@
                         <div class="product-box">
                             <div class="product-img">
                                 <a href="#">
-                                    <img src="/bzweb/storage/assets/images/col-2-tall.jpg" alt="">
+                                    <img src="{{ asset($item->path) }}" alt="">
                                     <img src="/bzweb/storage/assets/images/col-1-tall.jpg" alt="">
                                 </a>
                                 <div class="product-badge-left">
-                                    <span class="font-small uppercase font-family-secondary font-weight-medium">New</span>
-                                </div>
-                                <div class="product-badge-right red">
-                                    <span class="font-small uppercase font-family-secondary font-weight-medium">-50%</span>
+                                    <span class="font-small uppercase font-family-secondary font-weight-medium">Шинэ</span>
                                 </div>
                             </div>
                             <div class="product-title">
-                                <h6 class="font-weight-medium"><a href="#">Product title</a></h6>
+                                <h6 class="font-weight-medium"><a href="#">{{ $item->title }}</a></h6>
                                 <div class="price-and-cart">
                                     <div class="price">
-                                        <del>$98</del>
-                                        <span>$49</span>
+                                        {{-- <del>$98</del> --}}
+                                        <span>{{ $item->price }}</span>
                                     </div>
-                                    <div class="add-to-cart">
+                                    {{-- <div class="add-to-cart">
                                         <a class="button-text-1" href="#">Add to Cart</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="add-to-wishlist">
                                     <a href="#"><i class="far fa-heart"></i></a>
