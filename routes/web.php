@@ -34,7 +34,8 @@ Route::middleware([
 });
 
 Route::get('/page/{id?}', [PublicController::class, 'menuPage'])->name('page');
-Route::get('/products/{id?}', [PublicController::class, 'products'])->name('products');
+Route::get('/products/{id?}', [PublicController::class, 'products'])->name('products'); 
+Route::get('/product/{id}', [PublicController::class, 'product'])->name('product');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group(function () {

@@ -11,6 +11,7 @@ use App\Models\PostCategories;
 use App\Models\ProductCategories;
 use App\Models\Products;
 use App\Models\ProductsToCategories;
+use App\Models\ProductImages;
 
 
 class PublicController extends Controller
@@ -54,8 +55,10 @@ class PublicController extends Controller
 
     public function product($id)
     {
+        $product = Products::find($id);
+        $productImages = ProductImages::where('product_id', '=', $id)->get();
 
-        return view('product');
+        return view('product', compact('product', 'productImages'));
     }
 
     public function products($id = null) 

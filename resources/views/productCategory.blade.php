@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.shopMaster')
 @section('content')
     <!-- Products section -->
     <div class="section">
@@ -26,27 +26,24 @@
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="product-box">
                             <div class="product-img">
-                                <a href="#">
+                                <a href="{{ route('product', $item->id) }}">
                                     <img src="{{ asset($item->path) }}" alt="">
-                                    <img src="/bzweb/storage/assets/images/col-1-tall.jpg" alt="">
+                                    {{-- <img src="/bzweb/storage/assets/images/col-1-tall.jpg" alt=""> --}}
                                 </a>
                                 <div class="product-badge-left">
                                     <span class="font-small uppercase font-family-secondary font-weight-medium">Шинэ</span>
                                 </div>
                             </div>
                             <div class="product-title">
-                                <h6 class="font-weight-medium"><a href="#">{{ $item->title }}</a></h6>
+                                <h6 class="font-weight-medium"><a href="{{ route('product', $item->id) }}">{{ $item->title }}</a></h6>
                                 <div class="price-and-cart">
                                     <div class="price">
                                         {{-- <del>$98</del> --}}
                                         <span>{{ $item->price }}</span>
                                     </div>
-                                    {{-- <div class="add-to-cart">
-                                        <a class="button-text-1" href="#">Add to Cart</a>
-                                    </div> --}}
-                                </div>
-                                <div class="add-to-wishlist">
-                                    <a href="#"><i class="far fa-heart"></i></a>
+                                    <div class="add-to-cart">
+                                        <a class="button-text-1" href="#">Үнийн санал авах</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
