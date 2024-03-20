@@ -23,6 +23,7 @@
     <link href="{{ asset('storage/assets/plugins/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
 
     {{-- Theme Arty - business-1 --}}
+    @yield('styles')
 </head>
 
 <body data-preloader="4">
@@ -40,5 +41,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
     <script src="{{ asset('storage/assets/plugins/plugins.js') }}"></script>
     <script src="{{ asset('storage/assets/js/functions.js') }}"></script>
+
+    @yield('scripts')
 </body>
 </html>

@@ -23,6 +23,10 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'index'])->name('index');
 
+Route::get('/timeline', function () {
+    return view('timeline');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
