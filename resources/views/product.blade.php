@@ -7,7 +7,7 @@
                 <div class="owl-carousel product-carousel owl-dots-overlay-right">
                     @foreach ($productImages as $item)
                         <div data-hash="{{ $item->loop + 1 }}">
-                            <img src="{{ $item->path }}" alt="">
+                            <img src="{{ asset($item->path) }}" alt="">
                         </div>
                     @endforeach
                 </div>
@@ -23,17 +23,17 @@
                     <h5 class="font-weight-normal"><ins>{{ $product->price }}</ins></h5>
                     {{-- <h5 class="font-weight-normal"><del>$20</del><ins>$10</ins></h5> --}}
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                <form class="product-quantity margin-top-30">
+                {!! $item->description !!}
+                {{-- <form class="product-quantity margin-top-30">
                     <div class="qnt">
                         <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
                     </div>
                     <button class="button button-md button-dark" type="submit">Add to Cart</button>
-                </form>
+                </form> --}}
                 <div class="margin-top-30">
                     <p>SKU: 24421</p>
                     <p>Category: Accessories</p>
-                    <a class="button-text-1 font-small uppercase margin-top-30" href="#">Add to Wishlist</a>
+                    {{-- <a class="button-text-1 font-small uppercase margin-top-30" href="#">Add to Wishlist</a> --}}
                 </div>
             </div>
         </div><!-- end row -->
@@ -52,7 +52,9 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade show active" id="description">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <p>
+                    {{ $item->path }}
+                </p>
             </div>
             <div class="tab-pane fade" id="additional-info">
                 <table class="table">
