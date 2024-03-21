@@ -23,7 +23,7 @@
                     <h5 class="font-weight-normal"><ins>{{ $product->price }}</ins></h5>
                     {{-- <h5 class="font-weight-normal"><del>$20</del><ins>$10</ins></h5> --}}
                 </div>
-                {!! $item->description !!}
+                {!! $product->description !!}
                 {{-- <form class="product-quantity margin-top-30">
                     <div class="qnt">
                         <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
@@ -83,7 +83,7 @@
 </div><!-- end container -->
 
 <!-- Related Products -->
-<div class="section">
+{{-- <div class="section">
     <div class="container">
         <div class="text-center margin-bottom-40">
             <h3 class="font-weight-normal">Related Products</h3>
@@ -177,6 +177,6 @@
             </div>
         </div><!-- end owl-carousel -->
     </div><!-- end container -->
-</div>
+</div> --}}
 <!-- end Related Products -->
 @endsection
